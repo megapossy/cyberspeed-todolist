@@ -1,0 +1,14 @@
+@use "@/assets/fonts/Poppins/poppin-font";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  scroll-behavior: smooth;
+}
