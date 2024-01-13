@@ -1,5 +1,7 @@
 <template>
-  <TodoList />
+  <main class="w-full">
+    <TodoList />
+  </main>
 </template>
 
 <script setup lang="ts">

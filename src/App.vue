@@ -1,3 +1,5 @@
 <template>
-  <router-view />
+  <FadeUp>
+    <router-view />
+  </FadeUp>
 </template>

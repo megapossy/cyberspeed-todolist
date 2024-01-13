@@ -1,4 +1,4 @@
-import FadeUp from "@CMPNTS/Base/fade-up.vue"
+import FadeUp from "@CMPNTS/Base/transitions/fade-up.vue"
 import GroupFadeRight from "@CMPNTS/Base/transitions/group-fade-right.vue"
 
 declare module "@vue/runtime-core" {

@@ -9,7 +9,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@CMPNTS/*": ["./src/components/*"],
-      "@ASSETS/*": ["./src/assets/*"]
+      "@ASSETS/*": ["./src/assets/*"],
+      "@SRVCS/*": ["./src/services/*"],
+      "@STORES/*": ["./src/stores/*"]
     }
   }
 }
