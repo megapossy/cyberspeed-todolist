@@ -15,7 +15,7 @@
 
 html,
 body {
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
   scroll-behavior: smooth;
@@ -68,6 +68,6 @@ svg {
 .btn {
   &[type='button'], &[type='reset'], &[type='submit'] {
 
-    @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+    @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center;
   }
 }

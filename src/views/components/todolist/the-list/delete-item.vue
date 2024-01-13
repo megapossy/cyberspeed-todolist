@@ -13,7 +13,7 @@
 import SVGLoading from "@ASSETS/icons/loading-blue.svg"
 import SVGTrash01 from '@ASSETS/icons/trash-01.svg'
 import { type ListType, useStore } from "@STORES/todolist"
-import { type ComputedRef, inject, ref } from 'vue';
+import { type ComputedRef, inject, ref, nextTick } from 'vue';
 const ts = useStore();
 
 const isLoading = ref(false)
@@ -33,6 +33,7 @@ const deleteItem = async () => {
     if (item?.value?.id) {
       await ts.fetch.deleteItem(item.value.id)
       emits('item-deleted')
+      await nextTick()
       // ts.fetch.refresh()
       ts.actions.delete(item?.value?.id)
     }
