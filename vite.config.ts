@@ -14,7 +14,8 @@ export default defineConfig({
       '@CMPNTS': fileURLToPath(new URL('./src/components', import.meta.url)),
       '@ASSETS': fileURLToPath(new URL('./src/assets', import.meta.url)),
       '@SRVCS': fileURLToPath(new URL('./src/services', import.meta.url)),
-      '@STORES': fileURLToPath(new URL('./src/stores', import.meta.url))
+      '@STORES': fileURLToPath(new URL('./src/stores', import.meta.url)),
+      '@UTILS': fileURLToPath(new URL('./src/utils', import.meta.url))
     }
   },
   css: {

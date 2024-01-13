@@ -1,19 +1,48 @@
 <template>
-  <label class="relative inline-flex items-center cursor-pointer">
-    <input type="checkbox" value="" class="sr-only peer">
-    <div
-      class="toggle-box peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 peer peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:bg-blue-600">
+  <label @click="() => {
+    if (!$props.isLoading)
+      $emit('update:modelValue', !$props.modelValue)
+  }" class="relative inline-flex items-center cursor-pointer" :class="{
+  disabled: $props.isLoading
+}">
+    <div class="toggle-box" :class="{
+      toggled: $props.modelValue
+    }">
     </div>
     <slot />
+    <SVGLoading v-if="isLoading" class="h-[10px] w-[10px] inline text-gray-200 animate-spin dark:text-gray-600 ms-2" />
   </label>
 </template>
 
 <script setup lang="ts">
-// defineProps<{ title: string }>()
+import SVGLoading from "@ASSETS/icons/loading-blue.svg"
+
+withDefaults(defineProps<{ 'modelValue': boolean, isLoading: boolean }>(), {
+  modelValue: false,
+  isLoading: false,
+})
+defineEmits<{
+  'update:modelValue': [value: boolean]
+}>()
 </script>
 
 <style lang="scss" scoped>
 .toggle-box {
-  @apply w-11 h-6 bg-gray-200 rounded-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all;
+  @apply w-11 h-6 bg-gray-200 rounded-full after:content-[''] after:absolute after:top-[3px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all;
+}
+
+
+.toggled {
+  @apply outline-none ring-1 ring-blue-300 after:translate-x-full after:border-white bg-blue-600;
+}
+
+.disabled {
+  .toggle-box {
+    opacity: 0.5;
+  }
+}
+
+label {
+  user-select: none;
 }
 </style>

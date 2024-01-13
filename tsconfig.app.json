@@ -11,7 +11,8 @@
       "@CMPNTS/*": ["./src/components/*"],
       "@ASSETS/*": ["./src/assets/*"],
       "@SRVCS/*": ["./src/services/*"],
-      "@STORES/*": ["./src/stores/*"]
+      "@STORES/*": ["./src/stores/*"],
+      "@UTILS/*": ["./src/utils/*"]
     }
   }
 }

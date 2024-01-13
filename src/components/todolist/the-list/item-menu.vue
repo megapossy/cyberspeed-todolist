@@ -3,7 +3,7 @@
     <SVGDotsVertical class="text-gray-600" />
     <FadeUp>
       <div v-show="isShown" ref="menu" class="menu">
-        <DeleteItem /> <span class="ms-3">Delete Item</span>
+        <DeleteItem @item-deleted="isShown=false" /> 
       </div>
     </FadeUp>
   </div>

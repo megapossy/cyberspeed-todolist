@@ -9,6 +9,7 @@ import '@ASSETS/styles/main.scss'
 
 import FadeUp from "@CMPNTS/Base/transitions/fade-up.vue"
 import GroupFadeRight from "@CMPNTS/Base/transitions/group-fade-right.vue"
+import MyButton from "@CMPNTS/Base/my-button.vue"
 
 const app = createApp(App)
 
@@ -17,5 +18,6 @@ app.use(router)
 
 app.component('FadeUp',FadeUp)
 app.component('GroupFadeRight',GroupFadeRight)
+app.component('MyButton',MyButton)
 
 app.mount('#app')
