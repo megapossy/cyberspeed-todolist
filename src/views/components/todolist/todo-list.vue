@@ -30,7 +30,13 @@ import SVGRefresh from "@ASSETS/icons/refresh-cw-01.svg"
 import SVGLoading from "@ASSETS/icons/loading-blue.svg"
 
 import { useStore } from "@STORES/todolist"
+import { onMounted } from "vue"
+onMounted(() => {
+  ts.fetch.refresh()
+})
+
 const ts = useStore();
+
 
 </script>
 

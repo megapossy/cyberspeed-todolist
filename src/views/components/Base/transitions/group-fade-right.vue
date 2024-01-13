@@ -34,22 +34,43 @@ which this transition component may have no control or effect
   /* overflow: hidden; */
 }
 
-/* 1. declare transition */
-.faderight-group-move,
+// /* 1. declare transition */
+// .faderight-group-move,
+// .faderight-group-enter-active,
+// .faderight-group-leave-active {
+//   transition: all 0.5s ease;
+// }
+
+// /* 2. declare enter from and leave to state */
+// .faderight-group-enter-from,
+// .faderight-group-leave-to {
+//   /* opacity: 0; */
+//   transform: translateX(30px);
+// }
+
+// /* 3. ensure leaving items are taken out of layout flow so that moving
+//       animations can be calculated correctly. */
+// .faderight-group-leave-active {
+//   position: absolute;
+// }
+
+
+
+
+.faderight-group-move, /* apply transition to moving elements */
 .faderight-group-enter-active,
 .faderight-group-leave-active {
   transition: all 0.5s ease;
 }
 
-/* 2. declare enter from and leave to state */
 .faderight-group-enter-from,
 .faderight-group-leave-to {
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateX(30px);
 }
 
-/* 3. ensure leaving items are taken out of layout flow so that moving
-      animations can be calculated correctly. */
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
 .faderight-group-leave-active {
   position: absolute;
 }
