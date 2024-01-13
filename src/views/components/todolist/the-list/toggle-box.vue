@@ -31,7 +31,6 @@ defineEmits<{
   @apply w-11 h-6 bg-gray-200 rounded-full after:content-[''] after:absolute after:top-[3px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all;
 }
 
-
 .toggled {
   @apply outline-none ring-1 ring-blue-300 after:translate-x-full after:border-white bg-blue-600;
 }
