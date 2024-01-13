@@ -32,9 +32,9 @@ const deleteItem = async () => {
     isLoading.value = true;
     if (item?.value?.id) {
       await ts.fetch.deleteItem(item.value.id)
+      emits('item-deleted')
       // ts.fetch.refresh()
       ts.actions.delete(item?.value?.id)
-      emits('item-deleted')
     }
   } catch (error) {
     console.error(error)
