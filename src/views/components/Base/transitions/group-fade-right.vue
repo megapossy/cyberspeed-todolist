@@ -66,7 +66,7 @@ which this transition component may have no control or effect
 .faderight-group-enter-from,
 .faderight-group-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX(10px);
 }
 
 /* ensure leaving items are taken out of layout flow so that moving
