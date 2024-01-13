@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#app {
+  grid-template-columns: auto;
+}
+
 
 html,
 body {
@@ -11,4 +15,12 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
   scroll-behavior: smooth;
+  @apply text-gray-600;
+}
+
+
+
+svg {
+  height: 1.3rem;
+  width: 1.3rem;
 }
