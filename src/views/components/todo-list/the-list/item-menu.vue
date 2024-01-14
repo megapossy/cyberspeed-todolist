@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import SVGDotsVertical from '@ASSETS/icons/dots-vertical.svg'
-import DeleteItem from '@CMPNTS/todolist/the-list/delete-item.vue'
+import DeleteItem from '@CMPNTS/todo-list/the-list/delete-item.vue'
 import { onClickOutside } from "@vueuse/core"
 import { ref } from 'vue';
 

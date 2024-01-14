@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import TodoList from "@CMPNTS/todolist/todo-list.vue"
+import TodoList from "@CMPNTS/todo-list/todo-list.vue"
 </script>
 
 <style scoped></style>

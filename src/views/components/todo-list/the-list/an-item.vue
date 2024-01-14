@@ -2,7 +2,7 @@
   <li class="py-4">
     <div class="flex items-center w-full">
       <ToggleBox @click="toggle()" :model-value="isToggled" :is-loading="isLoading">
-        <span class="ms-3 text-xl font-medium text-gray-900 dark:text-gray-300" :class="{ strike: isToggled }">
+        <span class="ms-3 cursor-pointer text-xl font-medium text-gray-900 dark:text-gray-300" :class="{ strike: isToggled }">
           {{ $props.item.title }}
         </span>
       </ToggleBox>
@@ -20,8 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import ItemMenu from "@CMPNTS/todolist/the-list/item-menu.vue"
-import ToggleBox from "@CMPNTS/todolist/the-list/toggle-box.vue"
+import ItemMenu from "@CMPNTS/todo-list/the-list/item-menu.vue"
 import type { ListType } from "@STORES/todolist"
 import { computed, provide, ref } from "vue";
 import { format as formatDate } from "@UTILS/date";

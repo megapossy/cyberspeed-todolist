@@ -10,7 +10,7 @@
     }">
     </div>
     <slot />
-    <SVGLoading v-if="isLoading" class="h-[10px] w-[10px] inline text-gray-200 animate-spin dark:text-gray-600 ms-2" />
+    <SVGLoading v-if="isLoading" class="h-[1rem] w-[1rem] inline text-gray-200 animate-spin dark:text-gray-600 ms-2" />
   </label>
 </template>
 
@@ -24,6 +24,14 @@ withDefaults(defineProps<{ 'modelValue': boolean, isLoading: boolean }>(), {
 defineEmits<{
   'update:modelValue': [value: boolean]
 }>()
+</script>
+<script lang="ts">
+import ToggleBox from "./ToggleBox.vue"
+declare module "@vue/runtime-core" {
+  export interface GlobalComponents {
+    ToggleBox: typeof ToggleBox;
+  }
+}
 </script>
 
 <style lang="scss" scoped>

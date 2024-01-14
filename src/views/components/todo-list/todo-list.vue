@@ -23,8 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import AddTask from "@CMPNTS/todolist/add-task.vue"
-import TheList from "@CMPNTS/todolist/the-list.vue"
+import AddTask from "@CMPNTS/todo-list/add-task.vue"
+import TheList from "@CMPNTS/todo-list/the-list.vue"
 
 import SVGRefresh from "@ASSETS/icons/refresh-cw-01.svg"
 import SVGLoading from "@ASSETS/icons/loading-blue.svg"

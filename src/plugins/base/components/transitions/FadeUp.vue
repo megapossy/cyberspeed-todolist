@@ -15,6 +15,15 @@ const props = defineProps({
   },
 });
 </script>
+<script lang="ts">
+import FadeUp from "./FadeUp.vue"
+declare module "@vue/runtime-core" {
+  export interface GlobalComponents {
+    FadeUp: typeof FadeUp;
+  }
+}
+</script>
+
 <style lang="scss">
 .fade-up {
   &-enter-from {

@@ -30,7 +30,7 @@ const VContraints = {
   text: {
     length: {
       maximum: 300,
-      tooLong: "^Text must be between 300 characters!",
+      tooLong: "^Text must be not exceed 300 characters!",
     }
   },
 

@@ -18,6 +18,14 @@ defineProps({
   },
 });
 </script>
+<script lang="ts">
+import GroupFadeRight from "./GroupFadeRight.vue"
+declare module "@vue/runtime-core" {
+  export interface GlobalComponents {
+    GroupFadeRight: typeof GroupFadeRight;
+  }
+}
+</script>
 
 <style lang="scss">
 /* 

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import AnItem from "@CMPNTS/todolist/the-list/an-item.vue"
+import AnItem from "@CMPNTS/todo-list/the-list/an-item.vue"
 import {useStore} from "@STORES/todolist"
 
 const todolistStore = useStore();

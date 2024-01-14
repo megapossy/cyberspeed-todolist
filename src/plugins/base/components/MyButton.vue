@@ -14,5 +14,13 @@ withDefaults(defineProps<{ isLoading: boolean }>(), {
   isLoading: false
 })
 </script>
+<script lang="ts">
+import MyButton from "./MyButton.vue"
+declare module "@vue/runtime-core" {
+  export interface GlobalComponents {
+    MyButton: typeof MyButton;
+  }
+}
+</script>
 
 <style scoped></style>
