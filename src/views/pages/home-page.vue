@@ -1,6 +1,8 @@
 <template>
   <main class="w-full">
-    <TodoList />
+    <div class="container mx-auto w-full p-2 sm:pt-20 flex justify-center items-start">
+      <TodoList class="w-full" />
+    </div>
   </main>
 </template>
 

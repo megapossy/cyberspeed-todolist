@@ -1,24 +1,18 @@
 <template>
-  <div class="container mx-auto w-full">
-    <div class="max-w-xl sm:min-w-96 m-2 sm:mx-auto bg-white shadow-lg rounded-lg overflow-hidden md:my-8 py-4">
-      <div class="flex justify-between px-4 py-2">
-        <h1 class="text-gray-800 font-bold text-2xl uppercase">To-Do List</h1>
+  <div class="max-w-xl sm:min-w-[370px] bg-white shadow-lg rounded-lg overflow-hidden ">
+    <div class="flex justify-between px-4 py-2">
+      <h1 class="text-gray-800 font-bold text-2xl uppercase">To-Do List</h1>
 
-        <button @click="ts.fetch.refresh()" type="button"
-          class="flex justify-center items-center text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2 text-center ">
-          <SVGRefresh v-if="!ts.isLoading" class="h-[10px] w-[10px]" />
-          <SVGLoading v-else class="h-[10px] w-[10px] inline text-gray-200 animate-spin dark:text-gray-600" />
-          <span class="sr-only">Icon description</span>
-        </button>
-
-      </div>
-
-      <AddTask class="mb-12" />
-      
-      <TheList />
-
+      <button @click="ts.fetch.refresh()" type="button"
+        class="flex justify-center items-center text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2 text-center ">
+        <SVGRefresh v-if="!ts.isLoading" class="h-[10px] w-[10px]" />
+        <SVGLoading v-else class="h-[10px] w-[10px] inline text-gray-200 animate-spin dark:text-gray-600" />
+        <span class="sr-only">Icon description</span>
+      </button>
 
     </div>
+    <AddTask class="mb-12" />
+    <TheList />
   </div>
 </template>
 
