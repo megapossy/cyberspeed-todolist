@@ -1,6 +1,6 @@
 <template>
   <main class="w-full">
-    <div class="container mx-auto w-full p-2 sm:pt-20 flex justify-center items-start">
+    <div class="container mx-auto w-full p-2 sm:py-20 flex justify-center items-start">
       <FadeUp>
         <TodoList v-show="isShown" class="w-full" />
       </FadeUp>
